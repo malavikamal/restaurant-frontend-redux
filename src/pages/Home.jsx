@@ -13,7 +13,7 @@ function Home() {
     }, [])
 
     const allRest = useSelector(state =>
-        state.restaurantSlice.allRestaurant.restaurants
+        state.restaurantSlice.allRestaurant
     )
     console.log('=====1=====');
     console.log(allRest);

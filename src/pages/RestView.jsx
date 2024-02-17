@@ -12,7 +12,7 @@ function RestView() {
 
     const {id} = useParams();
     const allRestaurant = useSelector(state =>
-        state.restaurantSlice.allRestaurant.restaurants
+        state.restaurantSlice.allRestaurant
     )
     const selectedRestaurant = allRestaurant?.filter(item =>
         item.id == id
@@ -34,7 +34,7 @@ function RestView() {
                 <Col md={3}>
                     <img
                         width={"100%"} className='rounded'
-                        src={selectedRestaurant[0].photograph} alt="" />
+                        src={selectedRestaurant[0]?.photograph} alt="" />
                 </Col>
 
                 <Col md={7} className='px-5' >
@@ -68,7 +68,7 @@ function RestView() {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>Operating Hours</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <ListGroup>
